@@ -28,10 +28,10 @@ const client = new MongoClient(uri, {
 
 client.connect((err) => {
   const appointmentsCollection = client
-    .db("doctorsPortal")
+    .db("doctors-portal")
     .collection("appointments");
-  const usersCollection = client.db("doctorsPortal").collection("users");
-  const doctorsCollection = client.db("doctorsPortal").collection("doctors");
+  const usersCollection = client.db("doctors-portal").collection("users");
+  const doctorsCollection = client.db("doctors-portal").collection("doctors");
 
   //add appointment
   app.post("/addAppointment", (req, res) => {
