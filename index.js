@@ -9,7 +9,7 @@ require("dotenv").config();
 const uri = `${process.env.MONGODB_CONNECTION_STRING}`;
 
 const app = express();
-const port = 5000;
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -107,6 +107,6 @@ client.connect((err) => {
   });
 });
 
-app.listen(process.env.PORT || port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`);
 });
